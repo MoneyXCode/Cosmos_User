@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>Summary Dashboard</title>
+</head>
+<body>
+    <script src="js/userapp.js"></script>
+    <div>
+        <div style="display: none;" class="topmenu py-3 px-5 justify-content-between align-content-center">
+            <div class="ms-2">
+                <img src="Images/logo-2.png" class="img-fluid" alt="">
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="ms-3"><a href="summarydashboard.html" style="text-decoration: none; color: black; font-weight: 300;"><i class="fas fa-house-user fa-md"></i></a></span>
+                <span class="ms-3"><a href="accounts.html" style="text-decoration: none; color: black; font-weight: 300;">Accounts</a></span>
+                <span class="ms-3"><a href="transefer.html" style="text-decoration: none; color: black; font-weight: 300;">Transfer</a></span>
+                <span class="ms-3"><a href="" style="text-decoration: none; color: #d30202; font-weight: 300;"><i class="fas fa-sign-out-alt fa-md"></i></a></span>
+            </div>
+        </div>
+    <div class="family-container d-flex">
+        <div class="sidebar">
+                <div class="logo-head py-3 px-3">
+                    <img src="Images/logo-2.png" class="mt-4 mb-5 img-fluid" alt="">
+                    <div class="leading">
+                        <div class="text-sm"><p>Welcome <span class="ms-2"><i class="fas fa-user-circle"></i></span><span id="usernamed" > Username</span></p></div>
+                    </div>
+                </div>
+                <div class="menu-content">
+                    <ul>
+                        <li id="Summary" style="list-style: none;border-right: 10px #D53F8C solid;"> <a href="summarydashboard.html" style="color: #D53F8C;"><div class="menu-itm card-body"><i class="fas fas fa-tachometer-alt pe-3"></i>Summary</div></a></li>
+                        <li id="Accounts" style="list-style: none;"> <a href="accounts.html"><div class="menu-itm card-body"><i class="fas fas fa-user pe-3"></i>Accounts</div></a></li>
+                        <li id="Transfer" style="list-style: none;"> <a href="transefer.html"><div class="menu-itm card-body active"><i class="fas fas fa-random pe-3"></i>Transfer</div></a></li>
+                        <li id="Cards" style="list-style: none;"> <a href="summarydashboard.html"><div class="menu-itm card-body"><i class="fas fas fa-credit-card pe-3"></i>Cards</div></a></li>
+                        <li id="Support-Messages" style="list-style: none;"> <a href="messages.html"><div class="menu-itm card-body"><i class="fas fas fa-comment-alt pe-3"></i>Support Messages</div></a></li>
+                        <li id="Log-Out" style="list-style: none;margin-top: 80px;"> <a href=""><div class="menu-itm card-body"><i class="fas fas fa-sign-out-alt pe-3"></i>Log Out</div></a></li>
+                    </ul> 
+                </div>
+        </div>
+        <div class="parent-form px-3 py-4 mt-2">
+            <div class="d-flex justify-content-between px-3 my-4">
+                <div style="border-bottom: 1px dotted #a0aec0;">
+                    <h1 style="color:#4a5568;" id="amount"><span id="currency1">load..</span> <span id="accbalance"> </span></h1>
+                    <div class="my-3 me-3">
+                        <p style="color: #a0aec0;font-weight: 500;">All Accounts balance in <span class="text-dark">GBP</span></p>
+                    </div>
+                </div>
+                <div class="d-flex" style="font-size: 0.8rem;">
+                    <a href="" class="text-dark"><i class="fas fa-search fa-2x me-4"></i></a>
+                    <a href="" class="text-dark"><i class="fa fa-bell fa-2x me-2" aria-hidden="true"></i></a>
+                    <div style="position: relative;" id="dropdownbtn" class="dropdownbtn"><a href="" class="text-dark" style="font-size: 18px;text-decoration: none;"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i><span id="myuser">Username</span></a>
+                        <div id="dropdowncont" class="p-2 dropdown-m">
+                            <ul id="ddbtn"style="list-style: none;padding-left: 0;">
+                                <li class="mt-3 ps-2"><a href="./summarydashboard.html" style="font-size: 14px;"><i class="fas fa-user-cog fa-md me-2"></i>Account Settings</a></li>
+                                <!--li class="mt-3 ps-2"><a href="./password.html" style="font-size: 14px;"><i class="fas fa-unlock-alt fa-md me-2"></i>Change Password</a></li-->
+                                <li class="mt-3 ps-2"><a href="" style="font-size: 14px;"><i class="fas fa-sign-out-alt fa-md me-2"></i>Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">   
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex">
+                        <div>
+                            <img src="./Images/marc.jpg" class="avatar me-3" alt="">
+                        </div>
+                        <div>
+                            <h3 style="font-size: 18px;" id="myname">Username</h3>
+                            <div class="d-flex"><p class="me-3"></p><a href="./messages.html" style="color: #D53F8C; text-decoration: none;"><i class="fas fa-mail-bulk"></i><small></small></a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="text-align: right;">
+                            <p class="mb-0" style="font-size: 18px;color: #718096;">Last access date: <span style="font-weight: 600;">Date</span></p>
+                            <p style="font-size: 18px; color: #718096;">At: <span style="font-weight: 600;">Time</span></p>
+                        </div>
+                    </div>
+                </div>
+                    <!--Accounts Box-->
+                    <div class="row">
+                        <div class="form-group mb-2 col-lg-6 col-md-6">
+                            <h3 style="font-size: 18px;" class="mb-3">Account</h3>
+                            <div style="background-color: #F9F9F9;" class="d-flex justify-content-between p-3">
+                              <div class="">
+                                  <h3 style="font-size: 16px;" class="mb-2"><span id="acctype"></span></h3>
+                                  <p style="font-size: 14px;"><span id="accnumber"></span></p>
+                              </div>
+                              <div>
+                                  <h3 style="font-size: 16px;" class="mb-2"><span id="currency2">loading</span><span id="accbalance1"></span></h3>   
+                              </div>
+                              <div>
+                                  <a href="" style="font-size: 16px;text-decoration: none;color: #D53F8C;" class="mb-2">view details</a>  
+                                  
+                              </div>
+                          </div>
+                          </div>
+
+                          <!--Secondinner-->
+                          <div class="form-group mb-2 col-lg-6 col-md-7">
+                            <h3 style="font-size: 18px;" class="mb-3">Account</h3>
+                            <div style="background-color: #F9F9F9;" class="row p-3">
+                              <div class="col-lg-7">
+                                <p>Add a beneficiary to continue</p>
+                              </div>
+                              <div class="col-lg-5 mt-4">
+                                  <a href="" style="font-size: 15px;text-decoration: none;background-color: #D53F8C;" class="btn text-light" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-plus"></i> Add beneficiary</a>  
+                                  
+                              </div>
+                          </div>
+                          </div>
+                    </div>
+                    
+                      <!--Modal page-->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-body">
+                              <form method="get" action="">
+                                  <div class="form-group my-4">
+                                    <input type="text" class="form-control px-3 py-2" name="nickname" id="nickname" placeholder="Nickname">
+                                  </div>
+                                  <div class="form-group my-4">
+                                    <input type="text" class="form-control px-3 py-2" name="beneficiaryname" id="beneficiaryname" placeholder="Full beneficiary name">
+                                  </div>
+                                  <div class="form-group my-4">
+                                    <input type="text" class="form-control px-3 py-2" name="bankname" id="bankname" placeholder="Bank name">
+                                  </div>
+                                  <div class="form-group my-4">
+                                    <input type="text" class="form-control px-3 py-2" name="accnumber" id="accnumber" placeholder="Account number">
+                                  </div>
+                                  <div class="form-group my-4">
+                                    <input type="text" class="form-control px-3 py-2" name="routenumber" id="routenumber" placeholder="Routing number">
+                                  </div>
+                                  <button type="submit" style="background-color: #D53F8C; color: white; font-size: 17px;" class="btn form-control py-2">Add beneficiary</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                <!--Transaction box-->
+                <div class="mt-5">
+                    <h3 style="font-size: 18px;" class="mb-3">Transactions</h3>
+                    <div style="background-color: #F9F9F9;" class="col p-5">
+                        <p style="font-size: 18px;" class="mb-3">You have no transactions yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/myjs2.js"></script>
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+</body>
+</html>

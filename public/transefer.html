@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Account</title>
+</head>
+<body>
+    <script src="js/userapp.js"></script>
+    <div>
+        <div style="display: none;" class="topmenu py-3 px-5 justify-content-between align-content-center">
+            <div class="ms-2">
+                <img src="./Images/logo-2.png" class="img-fluid" alt="">
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="ms-3"><a href="summarydashboard.html" style="text-decoration: none; color: black; font-weight: 300;"><i class="fas fa-house-user fa-md"></i></a></span>
+                <span class="ms-3"><a href="accounts.html" style="text-decoration: none; color: black; font-weight: 300;">Accounts</a></span>
+                <span class="ms-3"><a href="transefer.html" style="text-decoration: none; color: black; font-weight: 300;">Transfer</a></span>
+                <span class="ms-3"><a href="" style="text-decoration: none; color: #d30202; font-weight: 300;"><i class="fas fa-sign-out-alt fa-md"></i></a></span>
+            </div>
+        </div>
+    <div class="family-container d-flex">
+        <div class="sidebar">
+                <div class="logo-head py-3 px-3">
+                    <img src="./images/logo-2.png" class="mt-4 mb-5 img-fluid" alt="">
+                    <div class="leading">
+                        <div class="text-sm"><p>Welcome <span class="ms-2"><i class="fas fa-user-circle"></i></span><span id="tusername">Username</span></p></div>
+                    </div>
+                </div>
+                <div class="menu-content">
+                    <ul>
+                        <li id="Summary" style="list-style: none;"> <a href="summarydashboard.html"><div class="menu-itm card-body"><i class="fas fas fa-tachometer-alt pe-3"></i>Summary</div></a></li>
+                        <li id="Accounts" style="list-style: none;"> <a href="accounts.html"><div class="menu-itm card-body"><i class="fas fas fa-user pe-3"></i>Accounts</div></a></li>
+                        <li id="Transfer" style="list-style: none;border-right: 10px #3182CE solid;"> <a href="transefer.html" style="color: #3182CE;"><div class="menu-itm card-body active"><i class="fas fas fa-random pe-3"></i>Transfer</div></a></li>
+                        <li id="Cards" style="list-style: none;"> <a href="cards.html"><div class="menu-itm card-body"><i class="fas fas fa-credit-card pe-3"></i>Cards</div></a></li>
+                        <li id="Support-Messages" style="list-style: none;"> <a href="messages.html"><div class="menu-itm card-body"><i class="fas fas fa-comment-alt pe-3"></i>Support Messages</div></a></li>
+                        <li id="Log-Out" style="list-style: none;margin-top: 80px;"> <a href=""><div class="menu-itm card-body"><i class="fas fas fa-sign-out-alt pe-3"></i>Log Out</div></a></li>
+                    </ul> 
+                </div>
+        </div>
+        <div class="parent-form px-3 py-4 mt-2">
+            <div class="d-flex justify-content-between px-3 my-4">
+                <div><h1 style="color: #4a5568;">Transfer Money</h1></div>
+                <div class="d-flex" style="font-size: 0.8rem;">
+                    <a href="" class="text-dark"><i class="fas fa-search fa-2x me-4"></i></a>
+                    <a href="" class="text-dark"><i class="fa fa-bell fa-2x me-2" aria-hidden="true"></i></a>
+                    <div style="position: relative;" id="dropdownbtn" class="dropdownbtn"><a href="" class="text-dark" style="font-size: 18px;text-decoration: none;"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i><span id="tusername1">Username</span></a>
+                        <div id="dropdowncont" class="p-2 dropdown-m">
+                            <ul id="ddbtn"style="list-style: none;padding-left: 0;">
+                                <li class="mt-3 ps-2"><a href="summarydashboard.html" style="font-size: 14px;"><i class="fas fa-user-cog fa-md me-2"></i>Account Settings</a></li>
+                                <li class="mt-3 ps-2"><a href="password.html" style="font-size: 14px;"><i class="fas fa-unlock-alt fa-md me-2"></i>Change Password</a></li>
+                                <li class="mt-3 ps-2"><a href="" style="font-size: 14px;"><i class="fas fa-sign-out-alt fa-md me-2"></i>Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+                <form action="" id="trans">
+                <div class="form-group mb-3">
+                    <label for="my-select">Transfer From</label>
+                    <div class="form-group my-4">
+                        <input type="text" class="form-control px-3 py-2" name="Name" id="name" placeholder="Account Name">
+                      </div>
+                </div>
+                <div class="my-5" role="tablist">
+                
+                        <div class="nav " id="nav-tab" role="tablist">
+                            <a id="Transfer-to-Myself" class="more-opt py-2 px-4 me-3 mt-2" data-toggle="tab" href="#nav-transfer" role="tab" aria-controls="nav-transfer" aria-selected="false">Transfer to Myself</a>
+                            <a id="Same-Bank-Transfer" class="more-opt py-2 px-4 me-3 mt-2" data-toggle="tab" href="#nav-sameb" role="tab" aria-controls="nav-sameb" aria-selected="false">Same Bank Transfer</a>
+                            <a id="Wire-Transfer" class="more-opt py-2 px-4 me-3 mt-2" data-toggle="tab" href="#nav-wiretrans" role="tab" aria-controls="nav-wiretrans" aria-selected="false">Wire Transfer</a>
+                        </div>
+                      
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade" id="nav-transfer" role="tabpanel" aria-labelledby="Transfer-to-Myself">
+                            <div class="form-group mt-5 mb-3">
+                                <label for="transto">Transfer to</label>
+                                <div class="form-group my-4">
+                                    <input type="text" class="form-control px-3 py-2" name="Name" id="name" placeholder="Account Name">
+                                  </div>
+                            </div>
+                            <a href="" id="myTab1" class="p-3" style="text-decoration: none; color: #cbd5e0;"><i class="fas fa-times-circle fa-lg"></i></a>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="nav-sameb" role="tabpanel" aria-labelledby="Same-Bank-Transfer">
+                            <div class="form-group mt-5 mb-3">
+                              <label for="">Beneficiary Account Number</label>
+                              <input type="text" class="form-control" name="benaccnumber" id="benaccnumber" placeholder="Account Number">
+                            </div>
+                            <a href="" id="myTab1" class="p-3" style="text-decoration: none; color: #cbd5e0;"><i class="fas fa-times-circle fa-lg"></i></a>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="nav-wiretrans" role="tabpanel" aria-labelledby="Wire-Transfer">
+                            <div class="form-group mt-5 mb-3">
+                                <label for="transto">Transfer to</label>
+                                <p><small>You must first add a beneficiary before you can make a wire transfer <a href="summarydashboard.html" style="text-decoration: none;font-weight: 500; color: #2c73be;">add beneficiary</a></small></p>
+                                <select id="transto" class="form-select py-2 ps-3" name="">
+                                    <option>Add beneficiary</option>
+                                </select>
+                            </div>
+                            <a href="" id="myTab1" class="p-3" style="text-decoration: none; color: #cbd5e0;"><i class="fas fa-times-circle fa-lg"></i></a>
+                        </div>
+
+                      </div>
+                </div>
+                <div class="form-group">
+                  <label for="Amount">Amount</label>
+                  <input type="text" class="form-control py-2 ps-3" name="Amount" id="Amount" aria-describedby="helpId" placeholder="£ Amount">
+                </div>
+                <div class="form-group my-4">
+                    <label for="datecal">Transfer Date</label>
+                    <input type="datetime-local" class="form-control py-2 ps-3" id="datecal" name="datecal">
+                  </div>
+                  <div class="form-group my-4">
+                    <label for="memo">Memo (Optional)</label>
+                    <input type="text" class="form-control py-2 ps-3" id="memo" name="memo" placeholder="Memo">
+                  </div>
+                  <button type="submit" class="form-control btn py-2" style="background-color: #2B6CB0;color: white;font-size: 18px;font-weight: 500;">Continue Transfer</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/myjs.js"></script>
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+     $('#myTab1').click(function (e) {
+    var tab = $(this);
+    if(tab.parent('li').hasClass('active')){
+        window.setTimeout(function(){
+            $(".tab-pane").removeClass('active');
+            tab.parent('li').removeClass('active');
+        },1);
+    }
+    });
+    </script>
+    
+</body>
+</html>

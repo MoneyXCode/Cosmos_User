@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Account</title>
+</head>
+<body>
+    <script src="js/userapp.js"></script>
+    <div>
+        <div style="display: none;" class="topmenu py-3 px-5 justify-content-between align-content-center">
+            <div class="ms-2">
+                <img src="./Images/logo-2.png" class="img-fluid" alt="">
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <span class="ms-3"><a href="summarydashboard.html" style="text-decoration: none; color: black; font-weight: 300;"><i class="fas fa-house-user fa-md"></i></a></span>
+                <span class="ms-3"><a href="accounts.html" style="text-decoration: none; color: black; font-weight: 300;">Accounts</a></span>
+                <span class="ms-3"><a href="transefer.html" style="text-decoration: none; color: black; font-weight: 300;">Transfer</a></span>
+                <span class="ms-3"><a href="" style="text-decoration: none; color: #d30202; font-weight: 300;"><i class="fas fa-sign-out-alt fa-md"></i></a></span>
+            </div>
+        </div>
+    <div class="family-container d-flex">
+        <div class="sidebar">
+                <div class="logo-head py-3 px-3">
+                    <img src="./images/logo-2.png" class="mt-4 mb-5 img-fluid" alt="">
+                    <div class="leading">
+                        <div class="text-sm"><p>Welcome <span class="ms-2"><i class="fas fa-user-circle"></i></span><span id="musername">Username</span></p></div>
+                    </div>
+                </div>
+                <div class="menu-content">
+                    <ul>
+                        <li id="Summary" style="list-style: none;"> <a href="summarydashboard.html"><div class="menu-itm card-body"><i class="fas fas fa-tachometer-alt pe-3"></i>Summary</div></a></li>
+                        <li id="Accounts" style="list-style: none;"> <a href="accounts.html"><div class="menu-itm card-body"><i class="fas fas fa-user pe-3"></i>Accounts</div></a></li>
+                        <li id="Transfer" style="list-style: none;"> <a href="transefer.html"><div class="menu-itm card-body active"><i class="fas fas fa-random pe-3"></i>Transfer</div></a></li>
+                        <li id="Cards" style="list-style: none;"> <a href="cards.html"><div class="menu-itm card-body"><i class="fas fas fa-credit-card pe-3"></i>Cards</div></a></li>
+                        <li id="Support-Messages" style="list-style: none;border-right: 10px #805AD5 solid;"> <a href="messages.html" style="color: #805AD5;"><div class="menu-itm card-body"><i class="fas fas fa-comment-alt pe-3"></i>Support Messages</div></a></li>
+                        <li id="Log-Out" style="list-style: none;margin-top: 80px;"> <a href=""><div class="menu-itm card-body"><i class="fas fas fa-sign-out-alt pe-3"></i>Log Out</div></a></li>
+                    </ul> 
+                </div>
+        </div>
+        <div class="parent-form px-3 py-4 mt-2">
+            <div class="d-flex justify-content-between px-3 my-4">
+                <div style="border-bottom: 1px dotted #a0aec0;">
+                    <h1 style="color:#4a5568;">Accounts</h1>
+                    <div class="my-3 me-3">
+                        <p style="color: #a0aec0;font-weight: 500;">All messages for <span class="text-dark"><span id="musername1"></span></p>
+                    </div>
+                </div>
+                <div class="d-flex" style="font-size: 0.8rem;">
+                    <a href="" class="text-dark"><i class="fas fa-search fa-2x me-4"></i></a>
+                    <a href="" class="text-dark"><i class="fa fa-bell fa-2x me-2" aria-hidden="true"></i></a>
+                    <div style="position: relative;" id="dropdownbtn" class="dropdownbtn"><a href="" class="text-dark" style="font-size: 18px;text-decoration: none;"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i><span id="musername2">Username</span></a>
+                        <div id="dropdowncont" class="p-2 dropdown-m">
+                            <ul id="ddbtn"style="list-style: none;padding-left: 0;">
+                                <li class="mt-3 ps-2"><a href="summarydashboard.html" style="font-size: 14px;"><i class="fas fa-user-cog fa-md me-2"></i>Account Settings</a></li>
+                                <li class="mt-3 ps-2"><a href="password.html" style="font-size: 14px;"><i class="fas fa-unlock-alt fa-md me-2"></i>Change Password</a></li>
+                                <li class="mt-3 ps-2"><a href="" style="font-size: 14px;"><i class="fas fa-sign-out-alt fa-md me-2"></i>Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-3">
+               <!--create support ticket-->
+               <div class="col-lg-4">
+                   <h3 style="font-size: 17px;">Create a support ticket</h3>
+                   <small class="mb-5">
+                    This ticket would be logged to our customer service department. <br>
+                    I prefer to send a message to my account manager <a href="" style="text-decoration: none;color: #805ad5;"><i class="fas fa-mail-bulk"></i><small> Send message</small></a>
+                   </small>
+
+                   <div class="mt-5 me-3">
+                       <form action="">
+                       <p class="mb-5">Ticket number: <span style="color: #805ad5;">SUPQRY202021254</span></p>
+                       <div class="my-3">
+                           <div class="form-group">
+                            <small>What type of enquiry are you making?</small>
+                               <select id="my-loan" class="form-select px-2 py-2" name="">
+                                <option value="loans">Loans</option>
+                                <option value="general">General Complaints</option>
+                                <option value="account">Account Services</option>
+                                <option value="transfer">Funds Transfer</option>
+                                <option value="new_account">New Account Opening Requirement</option>
+                                <option value="investment">Investment</option>
+                                <option value="product">Product 
+                               </select>
+                           </div>
+                           
+                           <div class="form-group my-3">
+                            <small>What type of enquiry are you making?</small>
+                            <textarea id="my-textarea" class="form-control" name="" cols="30" rows="10"></textarea>
+                           </div>
+                           <button type="submit" style="background-color: #805ad5;color: white; font-weight: 500;" class="btn form-control py-2">Create Ticket</button>
+                       </div>
+                    </form>
+                   </div>
+               </div>
+               
+               <!--tikets second-->
+               <div class="col-lg-8">
+                   <div class="d-flex ">
+                    <h3 style="font-size: 17px;margin-right: 1.2rem;">Ticket <span>0</span></h3>
+                    <h3 style="font-size: 17px;color: #a0aec0;">Notifications <span>0</span></h3>
+                   </div>
+                   <div class="mt-4">
+                    <div style="background-color: #F9F9F9;" class="col p-3">
+                        <p style="font-size: 18px;" class="mb-3">You have no support tickets yet.</p>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/myjs.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery1.11.0.js"></script>
+    
+</body>
+</html>
