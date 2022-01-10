@@ -5,6 +5,7 @@ import path, {dirname}  from "path";
 import { fileURLToPath } from "url";
 import userRouter from "./routes/userRouter.js";
 import transactionRouter from "./routes/transactionRouter.js";
+import cors from "cors";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -12,6 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(cors());
 
 app.use(express.static('public'));
 //app.use(express.static("./public/css"));
