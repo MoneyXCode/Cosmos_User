@@ -12,9 +12,9 @@ const user = localStorage.getItem("textvalue");
 
 console.log(user);
 
-const api_url = `http://localhost:5000/api/user/${user}`;
+const api_url = `http://alistarbank.herokuapp.com/api/user/${user}`;
 
-const transaction_api_url= `http://localhost:5000/api/transaction/${user}`
+const transaction_api_url= `http://alistarbank.herokuapp.com/api/transaction/${user}`
 
 async function getapi(url){
 
