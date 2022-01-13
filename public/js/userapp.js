@@ -171,13 +171,13 @@ getapi14(api_url);
 
 function show_username(data){
 
-    document.getElementById("myuser").outerHTML = data.username;  
+    document.getElementById("myuser").outerHTML = data.name;  
         
 }
 
 function show_username2(data){
     
-    document.getElementById("usernamed").outerHTML = data.username;
+    document.getElementById("usernamed").outerHTML = data.name;
 }
 
 function show_name(data){
